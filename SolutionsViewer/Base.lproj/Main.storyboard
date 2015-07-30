@@ -1,25 +1,92 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ua5-R1-bHC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Solutions Table View Controller-->
+        <scene sceneID="iQ2-qo-brk">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                <tableViewController id="kea-Bh-Drc" customClass="SolutionsTableViewController" customModule="SolutionsViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rfo-hW-GVH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="kea-Bh-Drc" id="8iT-qT-Zr0"/>
+                            <outlet property="delegate" destination="kea-Bh-Drc" id="eBD-AA-TKd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="wcc-wC-vRt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7Z-bo-kYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1132" y="188"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="AMJ-SF-WW9">
+            <objects>
+                <viewController storyboardIdentifier="detailViewController" id="2lA-6H-ulu" customClass="DetailViewController" customModule="SolutionsViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KJ0-Ug-SKb"/>
+                        <viewControllerLayoutGuide type="bottom" id="LSb-0H-1GO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gFH-LI-del">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqg-yX-6Dm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eqg-yX-6Dm" firstAttribute="top" secondItem="KJ0-Ug-SKb" secondAttribute="bottom" id="1bg-W6-xEL"/>
+                            <constraint firstAttribute="trailing" secondItem="eqg-yX-6Dm" secondAttribute="trailing" id="67v-sq-uR4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eqg-yX-6Dm" secondAttribute="trailing" constant="-16" id="Ar0-gx-SwC"/>
+                            <constraint firstItem="eqg-yX-6Dm" firstAttribute="top" secondItem="gFH-LI-del" secondAttribute="top" id="HJ5-Wi-hV8"/>
+                            <constraint firstItem="eqg-yX-6Dm" firstAttribute="leading" secondItem="gFH-LI-del" secondAttribute="leadingMargin" constant="-16" id="KOS-mz-xDW"/>
+                            <constraint firstItem="LSb-0H-1GO" firstAttribute="top" secondItem="eqg-yX-6Dm" secondAttribute="bottom" id="QgI-jC-tKc"/>
+                            <constraint firstItem="LSb-0H-1GO" firstAttribute="top" secondItem="eqg-yX-6Dm" secondAttribute="bottom" id="p7K-N8-5ap"/>
+                            <constraint firstItem="eqg-yX-6Dm" firstAttribute="leading" secondItem="gFH-LI-del" secondAttribute="leading" id="pJR-f2-PYp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1bg-W6-xEL"/>
+                                <exclude reference="Ar0-gx-SwC"/>
+                                <exclude reference="KOS-mz-xDW"/>
+                                <exclude reference="p7K-N8-5ap"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="NeF-iz-mVt"/>
+                    <connections>
+                        <outlet property="webView" destination="eqg-yX-6Dm" id="p0M-wB-ncs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RwH-nl-d0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842" y="188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9GG-da-nWu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ua5-R1-bHC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qkh-xX-wmh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kea-Bh-Drc" kind="relationship" relationship="rootViewController" id="cow-Fy-pka"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fn1-nw-NgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="188"/>
         </scene>
     </scenes>
 </document>

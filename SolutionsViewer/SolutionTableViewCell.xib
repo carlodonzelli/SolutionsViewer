@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZC9-7K-2d1" customClass="SolutionTableViewCell" customModule="SolutionsViewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="101"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZC9-7K-2d1" id="RG4-mV-f3v">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qvP-O5-HxX">
+                        <rect key="frame" x="8" y="21" width="80" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="oSS-u2-qwI"/>
+                            <constraint firstAttribute="width" constant="80" id="vfT-Gl-ZoS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="700" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="211" translatesAutoresizingMaskIntoConstraints="NO" id="kcy-Fp-dj5">
+                        <rect key="frame" x="104" y="28" width="211" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="211" translatesAutoresizingMaskIntoConstraints="NO" id="slH-4X-obI">
+                        <rect key="frame" x="104" y="58" width="211" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="201-Vi-S6C"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="IAF-6G-ivh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="201-Vi-S6C"/>
+                                <exclude reference="IAF-6G-ivh"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="slH-4X-obI" firstAttribute="top" secondItem="kcy-Fp-dj5" secondAttribute="bottom" constant="8" id="4Ce-nt-nuX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="slH-4X-obI" secondAttribute="bottom" constant="20" id="4db-cz-tTg"/>
+                    <constraint firstItem="kcy-Fp-dj5" firstAttribute="top" secondItem="RG4-mV-f3v" secondAttribute="topMargin" constant="20" id="74x-2Z-VLt"/>
+                    <constraint firstAttribute="centerY" secondItem="qvP-O5-HxX" secondAttribute="centerY" id="8T3-UZ-NoM"/>
+                    <constraint firstItem="qvP-O5-HxX" firstAttribute="leading" secondItem="RG4-mV-f3v" secondAttribute="leadingMargin" id="9fM-TI-NOj"/>
+                    <constraint firstItem="kcy-Fp-dj5" firstAttribute="trailing" secondItem="slH-4X-obI" secondAttribute="trailing" id="Gw4-CO-aLz"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="slH-4X-obI" secondAttribute="bottom" constant="20" id="Jr1-1m-4Y3"/>
+                    <constraint firstItem="kcy-Fp-dj5" firstAttribute="trailing" secondItem="RG4-mV-f3v" secondAttribute="trailingMargin" id="NeG-OL-qVq"/>
+                    <constraint firstItem="kcy-Fp-dj5" firstAttribute="trailing" secondItem="RG4-mV-f3v" secondAttribute="trailingMargin" id="NtO-sb-oh3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="slH-4X-obI" secondAttribute="bottom" constant="20" id="OGu-gp-P75"/>
+                    <constraint firstItem="slH-4X-obI" firstAttribute="top" secondItem="kcy-Fp-dj5" secondAttribute="bottom" constant="8" id="Zxh-zE-AF5"/>
+                    <constraint firstItem="kcy-Fp-dj5" firstAttribute="leading" secondItem="qvP-O5-HxX" secondAttribute="trailing" constant="8" id="bz7-TJ-N2K"/>
+                    <constraint firstItem="kcy-Fp-dj5" firstAttribute="trailing" secondItem="slH-4X-obI" secondAttribute="trailing" id="d57-s7-VRS"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="slH-4X-obI" secondAttribute="bottom" constant="20" id="dr6-9n-N0i"/>
+                    <constraint firstItem="kcy-Fp-dj5" firstAttribute="leading" secondItem="qvP-O5-HxX" secondAttribute="trailing" constant="16" id="jZu-Wk-hQg"/>
+                    <constraint firstItem="slH-4X-obI" firstAttribute="top" secondItem="kcy-Fp-dj5" secondAttribute="bottom" constant="10" id="r7h-Bc-yCz"/>
+                    <constraint firstItem="kcy-Fp-dj5" firstAttribute="leading" secondItem="slH-4X-obI" secondAttribute="leading" id="sor-th-hIg"/>
+                    <constraint firstItem="kcy-Fp-dj5" firstAttribute="top" secondItem="RG4-mV-f3v" secondAttribute="topMargin" constant="20" id="szl-AE-1YX"/>
+                    <constraint firstItem="kcy-Fp-dj5" firstAttribute="leading" secondItem="slH-4X-obI" secondAttribute="leading" id="xPY-Ut-WDO"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="74x-2Z-VLt"/>
+                        <exclude reference="Gw4-CO-aLz"/>
+                        <exclude reference="NeG-OL-qVq"/>
+                        <exclude reference="bz7-TJ-N2K"/>
+                        <exclude reference="xPY-Ut-WDO"/>
+                        <exclude reference="4Ce-nt-nuX"/>
+                        <exclude reference="4db-cz-tTg"/>
+                        <exclude reference="Jr1-1m-4Y3"/>
+                        <exclude reference="OGu-gp-P75"/>
+                        <exclude reference="Zxh-zE-AF5"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="slH-4X-obI" id="Dzv-6f-1sq"/>
+                <outlet property="horizontalSpacing" destination="jZu-Wk-hQg" id="co7-xM-MOi"/>
+                <outlet property="nameLabel" destination="kcy-Fp-dj5" id="kMq-O5-pxh"/>
+                <outlet property="thumbnailView" destination="qvP-O5-HxX" id="m1Q-Ra-VMQ"/>
+                <outlet property="thumbnailWidth" destination="vfT-Gl-ZoS" id="0yT-GF-0zV"/>
+            </connections>
+            <point key="canvasLocation" x="-81.5" y="181"/>
+        </tableViewCell>
+    </objects>
+</document>

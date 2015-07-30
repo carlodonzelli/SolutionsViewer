@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         println("Set up repository")
+        let apiManager = APIManager()
+        apiManager.fetchJSON()
     }
 
     override func didReceiveMemoryWarning() {
